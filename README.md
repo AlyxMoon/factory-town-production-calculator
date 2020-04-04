@@ -1,29 +1,3 @@
 # factory-town-production-calculator
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+A web app intended to display production info for the recipes in the video game Factory Town. In addition, the ability to create 'production lines' for planning purposes.
