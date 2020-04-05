@@ -1,12 +1,17 @@
 <template>
   <div>
-    Homepage
+    <recipe-list></recipe-list>
   </div>
 </template>
 
 <script>
+import RecipeList from '@/components/RecipeList'
+
 export default {
   name: 'HomeView',
+  components: {
+    RecipeList,
+  },
 }
 </script>
 

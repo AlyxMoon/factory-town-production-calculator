@@ -1,21 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-    </div>
+    <navbar></navbar>
     <router-view/>
   </div>
 </template>
 
+<script>
+import Navbar from '@/components/Navbar'
+
+export default {
+  name: 'App',
+  components: {
+    Navbar,
+  },
+}
+</script>
+
 <style lang="scss">
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+a {
+  font-weight: bold;
+  color: #2C3E50;
+  &.router-link-exact-active {
+    color: #42B983;
   }
 }
 </style>

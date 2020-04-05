@@ -1,0 +1,22 @@
+[
+  {
+    "name": "grain",
+    "quantity": 1,
+    "time": 2,
+    "building": "farm",
+    "ingredients": [
+    ]
+  },
+  {
+    "name": "herb",
+    "quantity": 1,
+    "time": 3,
+    "building": "farm",
+    "ingredients": [
+      {
+        "name": "coin_red",
+        "quantity": 1
+      }
+    ]
+  }
+]

@@ -11,6 +11,8 @@ export default new Vuex.Store({
 
   },
   actions: {
-
+    fetchRecipes: async (context) => {
+      return (await import('@/assets/data/recipes')).default
+    },
   },
 })
