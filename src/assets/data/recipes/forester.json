@@ -1,0 +1,30 @@
+[
+  {
+    "name": "wood",
+    "quantity": 1,
+    "time": 3,
+    "building": "forester",
+    "ingredients": [
+      {
+        "name": "coin_yellow",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "apple",
+    "quantity": 1,
+    "time": 2,
+    "building": "forester",
+    "ingredients": [
+    ]
+  },
+  {
+    "name": "pear",
+    "quantity": 1,
+    "time": 2,
+    "building": "forester",
+    "ingredients": [
+    ]
+  }
+]

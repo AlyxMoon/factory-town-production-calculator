@@ -21,6 +21,9 @@ const state = {
   recipes: [],
   recipeListPage: 0,
   availableFilters,
+  modifiers: {
+    happiness: 0,
+  },
 }
 
 export default new Vuex.Store({

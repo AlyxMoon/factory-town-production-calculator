@@ -2,6 +2,7 @@
 export const fetchRecipes = ({ commit }) => {
   return Promise.all([
     import('@/assets/data/recipes/farm'),
+    import('@/assets/data/recipes/forester'),
     import('@/assets/data/recipes/grainMill'),
     import('@/assets/data/recipes/lumberMill'),
     import('@/assets/data/recipes/pasture'),
@@ -13,6 +14,10 @@ export const fetchRecipes = ({ commit }) => {
       }, []),
     })
   })
+}
+
+export const setModifier = ({ commit }, { category, value }) => {
+  commit('SET_MODIFIER', { category, value })
 }
 
 export const setRecipeListPage = ({ commit }, page) => {

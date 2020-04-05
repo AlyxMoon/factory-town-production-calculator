@@ -1,4 +1,11 @@
 
+export const SET_MODIFIER = (state, { category, value }) => {
+  state.modifiers = {
+    ...state.modifiers,
+    [category]: value,
+  }
+}
+
 export const SET_RECIPES = (state, { recipes = [] } = {}) => {
   state.recipes = recipes
 }

@@ -5,6 +5,14 @@
     <recipe-list-filters></recipe-list-filters>
 
     <hr />
+    <label>
+      Happiness
+      <input
+        type="text"
+        :value="happiness"
+        @change="setModifier({ category: 'happiness', value: $event.target.value })" />
+    </label>
+
     <div class="pagination-wrapper">
       <span class="page-count">{{ currentRecipeListPageText }}</span>
       <button v-if="hasPreviousRecipeListPage" @click="decrementRecipeListPage">previous</button>
@@ -18,6 +26,7 @@
           <th>Building</th>
           <th>Recipe Time</th>
           <th>Produced / minute</th>
+          <th>Produced / minute (modifiers)</th>
         </tr>
       </thead>
       <tbody>
@@ -80,7 +89,7 @@ export default {
       'recipesOfPage',
     ]),
     ...mapState({
-      page: ({ recipeListPage }) => recipeListPage,
+      happiness: ({ modifiers }) => modifiers.happiness,
     }),
   },
   methods: {
@@ -88,6 +97,7 @@ export default {
       'fetchRecipes',
       'decrementRecipeListPage',
       'incrementRecipeListPage',
+      'setModifier',
     ]),
   },
 }

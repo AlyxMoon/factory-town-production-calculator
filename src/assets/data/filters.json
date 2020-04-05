@@ -2,6 +2,7 @@
   "building": [
     "all",
     "farm",
+    "forester",
     "grainMill",
     "lumberMill",
     "pasture",
