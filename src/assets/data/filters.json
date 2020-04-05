@@ -1,0 +1,15 @@
+{
+  "building": [
+    "all",
+    "farm",
+    "grainMill",
+    "lumberMill",
+    "pasture",
+    "stoneMason"
+  ],
+  "usesIngredients": [
+    "all",
+    "yes",
+    "no"
+  ]
+}

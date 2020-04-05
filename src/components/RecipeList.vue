@@ -1,10 +1,14 @@
 <template>
   <div class="recipe-list-component">
     <h2>Recipes</h2>
+
+    <recipe-list-filters></recipe-list-filters>
+
+    <hr />
     <div class="pagination-wrapper">
-      <span class="page-count">Showing page {{ page * 10 }}-{{ (page + 1) * 10 }} of {{ recipes.length }} recipes</span>
-      <button v-if="hasPrevPage" @click="page--">previous</button>
-      <button v-if="hasNextPage" @click="page++">next</button>
+      <span class="page-count">{{ currentRecipeListPageText }}</span>
+      <button v-if="hasPreviousRecipeListPage" @click="decrementRecipeListPage">previous</button>
+      <button v-if="hasNextRecipeListPage" @click="incrementRecipeListPage">next</button>
     </div>
     <table>
       <thead>
@@ -44,47 +48,47 @@
       </tbody>
     </table>
     <div class="pagination-wrapper">
-      <span class="page-count">Showing page {{ page + 1 }} of {{ recipes.length }} recipes</span>
-      <button v-if="hasPrevPage" @click="page--">previous</button>
-      <button v-if="hasNextPage" @click="page++">next</button>
+      <span class="page-count">{{ currentRecipeListPageText }}</span>
+      <button v-if="hasPreviousRecipeListPage" @click="decrementRecipeListPage">previous</button>
+      <button v-if="hasNextRecipeListPage" @click="incrementRecipeListPage">next</button>
     </div>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters, mapState } from 'vuex'
 
+import RecipeListFilters from '@/components/RecipeListFilters'
 import RecipeListItem from '@/components/RecipeListItem'
 import RecipeListIngredientItem from '@/components/RecipeListIngredientItem'
 
 export default {
   name: 'RecipeList',
   components: {
+    RecipeListFilters,
     RecipeListItem,
     RecipeListIngredientItem,
   },
-  data () {
-    return {
-      recipes: [],
-      page: 0,
-    }
-  },
-  async mounted () {
-    this.recipes = await this.fetchRecipes()
+  mounted () {
+    this.fetchRecipes()
   },
   computed: {
-    hasPrevPage () {
-      return this.page > 0
-    },
-    hasNextPage () {
-      return (this.page + 1) * 10 < this.recipes.length
-    },
-    recipesOfPage () {
-      return this.recipes.slice(this.page * 10, (this.page + 1) * 10)
-    },
+    ...mapGetters([
+      'currentRecipeListPageText',
+      'hasPreviousRecipeListPage',
+      'hasNextRecipeListPage',
+      'recipesOfPage',
+    ]),
+    ...mapState({
+      page: ({ recipeListPage }) => recipeListPage,
+    }),
   },
   methods: {
-    ...mapActions(['fetchRecipes']),
+    ...mapActions([
+      'fetchRecipes',
+      'decrementRecipeListPage',
+      'incrementRecipeListPage',
+    ]),
   },
 }
 </script>
