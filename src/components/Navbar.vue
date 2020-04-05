@@ -1,12 +1,12 @@
 <template>
   <div class="navbar-component">
     <nav class="container">
-      <div class="nav-links">
-        <router-link to="/recipes">Recipe List</router-link>
-        <router-link to="/modifiers">Modifiers List</router-link>
-        <router-link to="/consumption">House Consumption List</router-link>
-        <router-link to="/production">Production Lines</router-link>
-      </div>
+      <ul class="nav-links">
+        <li><router-link to="/recipes">Recipe List</router-link></li>
+        <li><router-link to="/modifiers">Modifiers List</router-link></li>
+        <li><router-link to="/consumption">House Consumption List</router-link></li>
+        <li><router-link to="/production">Production Lines</router-link></li>
+      </ul>
     </nav>
   </div>
 </template>
@@ -31,12 +31,19 @@ $navbar-height: 50px;
     right: 0;
     height: $navbar-height;
 
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(30, 40, 40, 1);
     display: flex;
     flex-direction: row;
     align-items: center;
 
     .nav-links {
+      display: flex;
+      flex-direction: row;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
 
       a {
         position: relative;
@@ -51,7 +58,7 @@ $navbar-height: 50px;
         }
 
         &.router-link-exact-active {
-          color: #42B983;
+          color: #55D94E;
         }
       }
     }
