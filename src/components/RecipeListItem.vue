@@ -13,7 +13,6 @@ export default {
   name: 'RecipeListItem',
   props: {
     recipe: Object,
-    default: {},
   },
   methods: {
     itemsPerMinute (time, quantity) {

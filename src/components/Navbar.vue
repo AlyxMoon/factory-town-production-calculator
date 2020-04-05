@@ -1,5 +1,5 @@
 <template>
-  <div id="#navbar">
+  <div class="navbar">
     <router-link to="/">Home</router-link>
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#navbar {
+.navbar {
   padding: 30px;
 }
 </style>
