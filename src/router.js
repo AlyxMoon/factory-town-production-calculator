@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+
+import Default from '@/views/Default'
+import Home from '@/views/Home'
 
 Vue.use(Router)
 
@@ -11,7 +13,17 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      redirect: { name: 'recipes' },
+    },
+    {
+      path: '/recipes',
+      name: 'recipes',
       component: Home,
+    },
+    {
+      path: '*',
+      name: 'default',
+      component: Default,
     },
   ],
 })

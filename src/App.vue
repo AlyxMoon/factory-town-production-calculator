@@ -1,27 +1,39 @@
 <template>
   <div id="app">
-    <navbar></navbar>
-    <router-view/>
+    <Navbar></Navbar>
+    <div class="container">
+      <router-view/>
+    </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 
 export default {
   name: 'App',
   components: {
+    Footer,
     Navbar,
   },
 }
 </script>
 
 <style lang="scss">
-a {
-  font-weight: bold;
-  color: #2C3E50;
-  &.router-link-exact-active {
-    color: #42B983;
+html, body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 0 5%;
+  box-sizing: border-box;
+
+  #app > & {
+    min-height: calc(100vh - 150px);
+    padding-bottom: 50px;
   }
 }
 

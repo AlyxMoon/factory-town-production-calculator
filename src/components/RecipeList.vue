@@ -1,6 +1,6 @@
 <template>
   <div class="recipe-list-component">
-    <h2>Recipes</h2>
+    <h1>Recipes</h1>
 
     <recipe-list-filters></recipe-list-filters>
 
