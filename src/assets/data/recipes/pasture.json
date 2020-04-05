@@ -1,0 +1,180 @@
+[
+  {
+    "name": "egg",
+    "quantity": 1,
+    "time": 3,
+    "building": "pasture",
+    "ingredients": [
+      {
+        "name": "animalFeed",
+        "quantity": 1
+      },
+      {
+        "name": "water",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "fertilizer",
+    "quantity": 1,
+    "time": 3,
+    "building": "pasture",
+    "ingredients": [
+      {
+        "name": "animalFeed",
+        "quantity": 1
+      },
+      {
+        "name": "water",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "wool",
+    "quantity": 1,
+    "time": 6,
+    "building": "pasture",
+    "outputs": [
+      {
+        "name": "wool",
+        "quantity": 1
+      },
+      {
+        "name": "fertilizer",
+        "quantity": 1
+      }
+    ],
+    "ingredients": [
+      {
+        "name": "animalFeed",
+        "quantity": 2
+      },
+      {
+        "name": "water",
+        "quantity": 2
+      },
+      {
+        "name": "coin_yellow",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "rawChicken",
+    "quantity": 1,
+    "time": 5,
+    "building": "pasture",
+    "outputs": [
+      {
+        "name": "rawChicken",
+        "quantity": 1
+      },
+      {
+        "name": "fertilizer",
+        "quantity": 1
+      }
+    ],
+    "ingredients": [
+      {
+        "name": "animalFeed",
+        "quantity": 2
+      },
+      {
+        "name": "water",
+        "quantity": 1
+      },
+      {
+        "name": "coin_yellow",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "leather",
+    "quantity": 1,
+    "time": 8,
+    "building": "pasture",
+    "outputs": [
+      {
+        "name": "leather",
+        "quantity": 1
+      },
+      {
+        "name": "fertilizer",
+        "quantity": 1
+      }
+    ],
+    "ingredients": [
+      {
+        "name": "animalFeed",
+        "quantity": 4
+      },
+      {
+        "name": "water",
+        "quantity": 4
+      },
+      {
+        "name": "coin_yellow",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "beef",
+    "quantity": 1,
+    "time": 10,
+    "building": "pasture",
+    "outputs": [
+      {
+        "name": "beef",
+        "quantity": 1
+      },
+      {
+        "name": "fertilizer",
+        "quantity": 1
+      }
+    ],
+    "ingredients": [
+      {
+        "name": "animalFeed",
+        "quantity": 4
+      },
+      {
+        "name": "water",
+        "quantity": 4
+      },
+      {
+        "name": "coin_yellow",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "milk",
+    "quantity": 1,
+    "time": 2,
+    "building": "pasture",
+    "outputs": [
+      {
+        "name": "milk",
+        "quantity": 1
+      },
+      {
+        "name": "fertilizer",
+        "quantity": 1
+      }
+    ],
+    "ingredients": [
+      {
+        "name": "animalFeed",
+        "quantity": 2
+      },
+      {
+        "name": "water",
+        "quantity": 2
+      }
+    ]
+  }
+]

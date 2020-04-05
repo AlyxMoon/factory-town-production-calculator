@@ -1,0 +1,30 @@
+[
+  {
+    "name": "stoneBrick",
+    "quantity": 1,
+    "time": 4,
+    "building": "stoneMason",
+    "ingredients": [
+      {
+        "name": "stone",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "polishedStone",
+    "quantity": 1,
+    "time": 10,
+    "building": "stoneMason",
+    "ingredients": [
+      {
+        "name": "stone",
+        "quantity": 10
+      },
+      {
+        "name": "coin_blue",
+        "quantity": 2
+      }
+    ]
+  }
+]

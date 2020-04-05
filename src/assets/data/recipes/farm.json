@@ -1,0 +1,62 @@
+[
+  {
+    "name": "grain",
+    "quantity": 1,
+    "time": 2,
+    "building": "farm",
+    "ingredients": [
+    ]
+  },
+  {
+    "name": "herb",
+    "quantity": 1,
+    "time": 3,
+    "building": "farm",
+    "ingredients": [
+      {
+        "name": "coin_red",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "berries",
+    "quantity": 1,
+    "time": 2,
+    "building": "farm",
+    "ingredients": [
+    ]
+  },
+  {
+    "name": "carrot",
+    "quantity": 1,
+    "time": 3,
+    "building": "farm",
+    "ingredients": [
+    ]
+  },
+  {
+    "name": "potato",
+    "quantity": 1,
+    "time": 3,
+    "building": "farm",
+    "ingredients": [
+    ]
+  },
+  {
+    "name": "tomato",
+    "quantity": 1,
+    "time": 3,
+    "building": "farm",
+    "ingredients": [
+    ]
+  },
+  {
+    "name": "cotton",
+    "quantity": 1,
+    "time": 2,
+    "building": "farm",
+    "ingredients": [
+    ]
+  }
+]

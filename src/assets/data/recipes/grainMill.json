@@ -1,0 +1,26 @@
+[
+  {
+    "name": "flour",
+    "quantity": 1,
+    "time": 4,
+    "building": "grainMill",
+    "ingredients": [
+      {
+        "name": "grain",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "name": "animalFeed",
+    "quantity": 1,
+    "time": 2,
+    "building": "grainMill",
+    "ingredients": [
+      {
+        "name": "grain",
+        "quantity": 2
+      }
+    ]
+  }
+]

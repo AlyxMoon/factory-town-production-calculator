@@ -1,0 +1,30 @@
+[
+  {
+    "name": "planks",
+    "quantity": 1,
+    "time": 3,
+    "building": "lumberMill",
+    "ingredients": [
+      {
+        "name": "wood",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "paper",
+    "quantity": 1,
+    "time": 4,
+    "building": "lumberMill",
+    "ingredients": [
+      {
+        "name": "wood",
+        "quantity": 2
+      },
+      {
+        "name": "water",
+        "quantity": 1
+      }
+    ]
+  }
+]

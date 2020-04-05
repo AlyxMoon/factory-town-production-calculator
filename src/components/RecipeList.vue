@@ -51,7 +51,7 @@ export default {
   name: 'RecipeList',
   components: {
     RecipeListItem,
-    RecipeListIngredientItem
+    RecipeListIngredientItem,
   },
   data () {
     return {
