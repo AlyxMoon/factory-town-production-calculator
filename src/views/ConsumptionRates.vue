@@ -6,12 +6,21 @@
       Happiness duration is how long the house will keep a happiness point after the item it's consuming has run out.
     </p>
 
+    <hr />
+    <label>
+      Number of houses
+      <input
+        type="number"
+        :value="houseCount"
+        @input="setHouseCount({ value: $event.target.value })" />
+    </label>
+
     <consumption-rates-list></consumption-rates-list>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions, mapState } from 'vuex'
 
 import ConsumptionRatesList from '@/components/ConsumptionRatesList'
 
@@ -20,11 +29,16 @@ export default {
   components: {
     ConsumptionRatesList,
   },
+  computed: {
+    ...mapState({
+      houseCount: ({ houseCount }) => houseCount,
+    }),
+  },
   created () {
     this.fetchConsumptionRates()
   },
   methods: {
-    ...mapActions(['fetchConsumptionRates']),
+    ...mapActions(['fetchConsumptionRates', 'setHouseCount']),
   },
 }
 </script>

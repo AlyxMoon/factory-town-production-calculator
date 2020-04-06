@@ -11,18 +11,25 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'ConsumptionRatesListItem',
   props: {
     consumption: Object,
   },
+  computed: {
+    ...mapState({
+      houseCount: ({ houseCount }) => houseCount,
+    }),
+  },
   methods: {
     consumptionTime (name, quality) {
-      if (quality === 1) return 60 / 20
-      if (quality === 2) return 60 / 25
-      if (quality === 3) return 60 / 30
-      if (quality === 4) return 60 / 40
-      if (quality === 5) return 60 / 50
+      const qualityModifier = {
+        1: 20, 2: 25, 3: 30, 4: 40, 5: 50,
+      }
+
+      return (this.houseCount * (60 / qualityModifier[quality])).toFixed(2)
     },
     happinessDuration (name, quality) {
       if (name === 'plank') return 30

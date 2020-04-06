@@ -98,4 +98,10 @@ h4, h5, h6 {
   text-align: right;
 }
 
+label {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 </style>

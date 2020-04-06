@@ -1,4 +1,8 @@
 
+export const SET_HOUSE_COUNT = (state, { houseCount }) => {
+  state.houseCount = houseCount
+}
+
 export const SET_MODIFIER = (state, { category, value }) => {
   state.modifiers = {
     ...state.modifiers,

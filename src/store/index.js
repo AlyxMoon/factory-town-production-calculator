@@ -25,6 +25,7 @@ const state = {
   modifiers: {
     happiness: 0,
   },
+  houseCount: 1,
 }
 
 export default new Vuex.Store({

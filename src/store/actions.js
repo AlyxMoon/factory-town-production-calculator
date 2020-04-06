@@ -33,6 +33,10 @@ export const fetchRecipes = ({ commit, state }) => {
   })
 }
 
+export const setHouseCount = ({ commit }, { value }) => {
+  commit('SET_HOUSE_COUNT', { houseCount: value })
+}
+
 export const setModifier = ({ commit }, { category, value }) => {
   commit('SET_MODIFIER', { category, value })
 }
