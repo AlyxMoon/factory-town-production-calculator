@@ -5,5 +5,96 @@
     "category": "woodConstruction",
     "level": 1,
     "quality": 3
+  },
+  {
+    "name": "reinforcedPlank",
+    "market": "general",
+    "category": "woodConstruction",
+    "level": 1,
+    "quality": 4
+  },
+  {
+    "name": "stoneBrick",
+    "market": "general",
+    "category": "stoneConstruction",
+    "level": 2,
+    "quality": 2
+  },
+  {
+    "name": "manaBrick",
+    "market": "general",
+    "category": "stoneConstruction",
+    "level": 2,
+    "quality": 4
+  },
+  {
+    "name": "nails",
+    "market": "general",
+    "category": "",
+    "level": 3,
+    "quality": 2
+  },
+  {
+    "name": "wool",
+    "market": "general",
+    "category": "fabric",
+    "level": 2,
+    "quality": 2
+  },
+  {
+    "name": "cloth",
+    "market": "general",
+    "category": "fabric",
+    "level": 2,
+    "quality": 3
+  },
+  {
+    "name": "shirt",
+    "market": "general",
+    "category": "fabric",
+    "level": 2,
+    "quality": 4
+  },
+  {
+    "name": "leather",
+    "market": "general",
+    "category": "",
+    "level": 2,
+    "quality": 3
+  },
+  {
+    "name": "shoe",
+    "market": "general",
+    "category": "",
+    "level": 3,
+    "quality": 4
+  },
+  {
+    "name": "cloak",
+    "market": "general",
+    "category": "",
+    "level": 3,
+    "quality": 5
+  },
+  {
+    "name": "warmCoat",
+    "market": "general",
+    "category": "",
+    "level": 5,
+    "quality": 5
+  },
+  {
+    "name": "woodAxe",
+    "market": "general",
+    "category": "",
+    "level": 3,
+    "quality": 4
+  },
+  {
+    "name": "pickaxe",
+    "market": "general",
+    "category": "",
+    "level": 4,
+    "quality": 5
   }
 ]
