@@ -1,5 +1,5 @@
 <template>
-  <tr>
+  <tr :class="{ last }">
     <td>{{ ingredient.name | friendlyName }}</td>
     <td>{{ ingredient.quantity }}</td>
     <td>{{ itemsPerMinute(time, ingredient.quantity) }}</td>
@@ -11,7 +11,7 @@
 export default {
   name: 'RecipeListIngredientItem',
   props: {
-    index: Number,
+    last: Boolean,
     ingredient: Object,
     time: Number,
   },
@@ -24,6 +24,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+tr {
+  &.last {
+    border-bottom: 2px solid #555555;
+  }
+}
+
 td {
   background-color: #EEEEEE;
   padding: 5px 20px;

@@ -40,11 +40,9 @@ html, body {
 table {
   width: 100%;
 
-  border: 1px solid black;
-  border-collapse: separate;
+  border-collapse: collapse;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  border-spacing: 0;
   overflow: hidden;
 
   thead {

@@ -35,7 +35,9 @@
           ></recipe-list-item>
           <tr
             :key="'recipe-item' + i + 'ingredient-header'"
-            v-if="recipe.ingredients && recipe.ingredients.length > 0">
+            v-if="recipe.ingredients && recipe.ingredients.length > 0"
+            class="recipe-ingredient-headers"
+          >
             <th colspan="2" :rowspan="recipe.ingredients.length + 1" class="align-right">Ingredients</th>
             <th>Name</th>
             <th>Quantity</th>
@@ -45,6 +47,7 @@
             v-for="(ingredient, j) in recipe.ingredients"
             :key="'recipe-' + recipe.name + '-' + 'ingredient-' + ingredient.name"
             :index="j"
+            :last="j === recipe.ingredients.length - 1"
             :ingredient="ingredient"
             :time="recipe.time"
           ></recipe-list-ingredient-item>
@@ -94,4 +97,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+tr {
+  &.recipe-ingredient-headers th {
+    font-size: 0.8em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+</style>
