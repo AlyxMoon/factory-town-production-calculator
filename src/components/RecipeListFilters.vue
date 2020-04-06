@@ -11,7 +11,7 @@
         :key="'option-' + option"
         :for="option"
       >
-        {{ option }}
+        {{ option | friendlyName }}
         <input
           type="checkbox"
           :name="option"

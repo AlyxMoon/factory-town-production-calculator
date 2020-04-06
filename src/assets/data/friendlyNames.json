@@ -1,0 +1,15 @@
+{
+  "farm": "Farm",
+  "forester": "Forester",
+  "grainMill": "Grain Mill",
+  "lumberMill": "Lumber Mill",
+  "pasture": "Pasture",
+  "stoneMason": "Stone Mason",
+
+  "coin_red": "Red coin",
+  "coin_yellow": "Yellow coin",
+  "coin_blue": "Blue coin",
+  "coin_purple": "Purple coin",
+
+  "animalFeed": "Animal Feed"
+}

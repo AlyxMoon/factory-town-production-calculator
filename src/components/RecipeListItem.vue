@@ -1,8 +1,8 @@
 <template>
   <tr>
-    <td>{{ recipe.name }}</td>
+    <td>{{ recipe.name | friendlyName }}</td>
     <td>{{ recipe.quantity }}</td>
-    <td>{{ recipe.building }}</td>
+    <td>{{ recipe.building | friendlyName }}</td>
     <td>{{ recipe.time }}</td>
     <td>{{ itemsPerMinute(recipe.time, recipe.quantity) }}</td>
     <td>{{ productionWithModifier(itemsPerMinute(recipe.time, recipe.quantity)) }}</td>

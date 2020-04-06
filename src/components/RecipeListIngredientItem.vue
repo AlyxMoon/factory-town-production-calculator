@@ -1,6 +1,6 @@
 <template>
   <tr>
-    <td>{{ ingredient.name }}</td>
+    <td>{{ ingredient.name | friendlyName }}</td>
     <td>{{ ingredient.quantity }}</td>
     <td>{{ itemsPerMinute(time, ingredient.quantity) }}</td>
     <td></td>
