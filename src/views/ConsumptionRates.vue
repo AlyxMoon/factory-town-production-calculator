@@ -3,8 +3,7 @@
     <h1>House Consumption Rates</h1>
     <p>
       This is a list of all goods that can be consumed by houses.
-      Consumption time is how often a house consumes the item.
-      Happiness time is how long the house will keep a happiness point after consuming the item.
+      Happiness duration is how long the house will keep a happiness point after the item it's consuming has run out.
     </p>
 
     <consumption-rates-list></consumption-rates-list>

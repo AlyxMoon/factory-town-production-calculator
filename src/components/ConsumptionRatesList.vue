@@ -9,6 +9,8 @@
           <th>Category</th>
           <th>House Level</th>
           <th>Quality Level</th>
+          <th>Consumption / minute</th>
+          <th>Happiness Duration (seconds)</th>
         </tr>
       </thead>
       <tbody>
