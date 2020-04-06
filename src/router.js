@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import ConsumptionRates from '@/views/ConsumptionRates'
 import Default from '@/views/Default'
-import Home from '@/views/Home'
+import Recipes from '@/views/Recipes'
 
 Vue.use(Router)
 
@@ -16,9 +17,14 @@ export default new Router({
       redirect: { name: 'recipes' },
     },
     {
+      path: '/consumption',
+      name: 'consumption',
+      component: ConsumptionRates,
+    },
+    {
       path: '/recipes',
       name: 'recipes',
-      component: Home,
+      component: Recipes,
     },
     {
       path: '*',

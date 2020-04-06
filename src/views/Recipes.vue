@@ -5,12 +5,19 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import RecipeList from '@/components/RecipeList'
 
 export default {
-  name: 'HomeView',
+  name: 'RecipesView',
   components: {
     RecipeList,
+  },
+  created () {
+    this.fetchRecipes()
+  },
+  methods: {
+    ...mapActions(['fetchRecipes']),
   },
 }
 </script>

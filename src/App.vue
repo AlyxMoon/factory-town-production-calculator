@@ -37,23 +37,48 @@ html, body {
   }
 }
 
-tr, th, td {
-  border-color: black;
-  border-style: solid;
-  border-width: 0;
+table {
+  width: 100%;
 
-  &.border-t {
-    border-top-width: 1px;
+  border: 1px solid black;
+  border-collapse: separate;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-spacing: 0;
+  overflow: hidden;
+
+  thead {
+    background-color: rgba(60, 80, 80, 1);
+    color: #DDDDDD;
   }
-  &.border-b {
-    border-bottom-width: 1px;
+
+  tr, th, td {
+    border-color: black;
+    border-style: solid;
+    border-width: 0;
+
+    &.border-t {
+      border-top-width: 1px;
+    }
+    &.border-b {
+      border-bottom-width: 1px;
+    }
+  }
+
+  th, td {
+    font-size: 1.1em;
+    padding: 10px 20px;
+    text-align: left;
   }
 }
 
-th, td {
-  font-size: 1.1em;
-  padding: 10px 20px;
-  text-align: left;
+.pagination-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  & > *:not(:last-child)  {
+    margin-right: 10px;
+  }
 }
 
 a {

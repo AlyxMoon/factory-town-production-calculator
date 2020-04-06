@@ -75,9 +75,6 @@ export default {
     RecipeListItem,
     RecipeListIngredientItem,
   },
-  mounted () {
-    this.fetchRecipes()
-  },
   computed: {
     ...mapGetters([
       'currentRecipeListPageText',
@@ -91,7 +88,6 @@ export default {
   },
   methods: {
     ...mapActions([
-      'fetchRecipes',
       'decrementRecipeListPage',
       'incrementRecipeListPage',
       'setModifier',
@@ -100,29 +96,4 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-table {
-  width: 100%;
-
-  border: 1px solid black;
-  border-collapse: separate;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-spacing: 0;
-  overflow: hidden;
-
-  thead {
-    background-color: rgba(60, 80, 80, 1);
-    color: #DDDDDD;
-  }
-}
-
-.pagination-wrapper {
-  display: flex;
-  flex-direction: row;
-
-  & > *:not(:last-child)  {
-    margin-right: 10px;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

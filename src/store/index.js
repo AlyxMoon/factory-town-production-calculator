@@ -18,6 +18,7 @@ const state = {
       all: true,
     },
   },
+  consumptionRates: [],
   recipes: [],
   recipeListPage: 0,
   availableFilters,

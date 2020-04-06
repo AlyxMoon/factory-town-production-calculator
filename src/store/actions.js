@@ -1,5 +1,24 @@
 
-export const fetchRecipes = ({ commit }) => {
+const flattenImportedArrays = (imports) => {
+  return imports.reduce((all, group) => ([...all, ...group.default]), [])
+}
+
+export const fetchConsumptionRates = ({ commit, state }) => {
+  if (state.consumptionRates && state.consumptionRates.length > 0) return
+
+  return Promise.all([
+    import('@/assets/data/consumption/food'),
+    import('@/assets/data/consumption/general'),
+  ]).then(consumptionRates => {
+    commit('SET_CONSUMPTION_RATES', {
+      consumptionRates: flattenImportedArrays(consumptionRates),
+    })
+  })
+}
+
+export const fetchRecipes = ({ commit, state }) => {
+  if (state.recipes && state.recipes.length > 0) return
+
   return Promise.all([
     import('@/assets/data/recipes/farm'),
     import('@/assets/data/recipes/forester'),
@@ -9,9 +28,7 @@ export const fetchRecipes = ({ commit }) => {
     import('@/assets/data/recipes/stoneMason'),
   ]).then(recipes => {
     commit('SET_RECIPES', {
-      recipes: recipes.reduce((all, group) => {
-        return [...all, ...group.default]
-      }, []),
+      recipes: flattenImportedArrays(recipes),
     })
   })
 }

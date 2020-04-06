@@ -6,6 +6,10 @@ export const SET_MODIFIER = (state, { category, value }) => {
   }
 }
 
+export const SET_CONSUMPTION_RATES = (state, { consumptionRates = [] } = {}) => {
+  state.consumptionRates = consumptionRates
+}
+
 export const SET_RECIPES = (state, { recipes = [] } = {}) => {
   state.recipes = recipes
 }
