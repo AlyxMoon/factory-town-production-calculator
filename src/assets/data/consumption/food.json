@@ -7,10 +7,129 @@
     "quality": 1
   },
   {
-    "name": "egg",
+    "name": "flour",
     "market": "food",
     "category": "grains",
+    "level": 1,
+    "quality": 2
+  },
+  {
+    "name": "bread",
+    "market": "food",
+    "category": "grains",
+    "level": 1,
+    "quality": 3
+  },
+  {
+    "name": "egg",
+    "market": "food",
+    "category": "",
     "level": 2,
     "quality": 1
+  },
+  {
+    "name": "fish",
+    "market": "food",
+    "category": "fish",
+    "level": 2,
+    "quality": 1
+  },
+  {
+    "name": "cookedFish",
+    "market": "food",
+    "category": "fish",
+    "level": 2,
+    "quality": 3
+  },
+  {
+    "name": "rawChicken",
+    "market": "food",
+    "category": "chicken",
+    "level": 2,
+    "quality": 1
+  },
+  {
+    "name": "cookedChicken",
+    "market": "food",
+    "category": "chicken",
+    "level": 2,
+    "quality": 4
+  },
+  {
+    "name": "rawBeef",
+    "market": "food",
+    "category": "beef",
+    "level": 2,
+    "quality": 1
+  },
+  {
+    "name": "cookedBeef",
+    "market": "food",
+    "category": "beef",
+    "level": 2,
+    "quality": 4
+  },
+  {
+    "name": "berries",
+    "market": "food",
+    "category": "fruit",
+    "level": 1,
+    "quality": 2
+  },
+  {
+    "name": "pear",
+    "market": "food",
+    "category": "fruit",
+    "level": 1,
+    "quality": 2
+  },
+  {
+    "name": "apple",
+    "market": "food",
+    "category": "fruit",
+    "level": 1,
+    "quality": 2
+  },
+  {
+    "name": "carrot",
+    "market": "food",
+    "category": "vegetables",
+    "level": 1,
+    "quality": 2
+  },
+  {
+    "name": "potato",
+    "market": "food",
+    "category": "vegetables",
+    "level": 1,
+    "quality": 2
+  },
+  {
+    "name": "tomato",
+    "market": "food",
+    "category": "vegetables",
+    "level": 1,
+    "quality": 2
+  },
+  {
+    "name": "fruitJuice",
+    "market": "food",
+    "category": "",
+    "level": 2,
+    "quality": 4
+  },
+  {
+    "name": "milk",
+    "market": "food",
+    "category": "",
+    "level": 1,
+    "quality": 2
+  },
+  {
+    "name": "butter",
+    "market": "food",
+    "category": "",
+    "level": 2,
+    "quality": 5
   }
 ]
