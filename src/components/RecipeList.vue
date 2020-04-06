@@ -32,21 +32,18 @@
       <tbody>
         <template v-for="(recipe, i) in recipesOfPage">
           <recipe-list-item
-            class="border-t"
             :key="'recipe-item-' + i + '-' + recipe.name"
             :recipe="recipe"
           ></recipe-list-item>
           <tr
             :key="'recipe-item' + i + 'ingredient-header'"
             v-if="recipe.ingredients && recipe.ingredients.length > 0">
-            <td></td>
-            <th>Ingredients</th>
+            <th colspan="2" :rowspan="recipe.ingredients.length + 1" class="align-right">Ingredients</th>
             <th>Name</th>
             <th>Quantity</th>
             <th>Used / minute</th>
           </tr>
           <recipe-list-ingredient-item
-            class="border-b"
             v-for="(ingredient, j) in recipe.ingredients"
             :key="'recipe-' + recipe.name + '-' + 'ingredient-' + ingredient.name"
             :index="j"
@@ -106,8 +103,18 @@ export default {
 <style lang="scss" scoped>
 table {
   width: 100%;
+
   border: 1px solid black;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-spacing: 0;
+  overflow: hidden;
+
+  thead {
+    background-color: rgba(60, 80, 80, 1);
+    color: #DDDDDD;
+  }
 }
 
 .pagination-wrapper {

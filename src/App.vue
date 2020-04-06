@@ -51,8 +51,8 @@ tr, th, td {
 }
 
 th, td {
-  padding: 5px 10px;
-
+  font-size: 1.1em;
+  padding: 10px 20px;
   text-align: left;
 }
 
@@ -67,6 +67,10 @@ a {
 h4, h5, h6 {
   margin: 0;
   padding: 0;
+}
+
+.align-right {
+  text-align: right;
 }
 
 </style>

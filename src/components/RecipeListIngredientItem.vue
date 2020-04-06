@@ -1,10 +1,9 @@
 <template>
   <tr>
-    <td></td>
-    <td></td>
     <td>{{ ingredient.name }}</td>
     <td>{{ ingredient.quantity }}</td>
     <td>{{ itemsPerMinute(time, ingredient.quantity) }}</td>
+    <td></td>
   </tr>
 </template>
 
@@ -24,4 +23,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+td {
+  background-color: #EEEEEE;
+  padding: 5px 20px;
+}
+</style>
