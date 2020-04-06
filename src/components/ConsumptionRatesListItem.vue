@@ -1,10 +1,10 @@
 <template>
   <tr>
     <td>{{ consumption.name | friendlyName }}</td>
-    <td>{{ consumption.market }}</td>
-    <td>{{ consumption.category }}</td>
-    <td>{{ consumption.level }}</td>
-    <td>{{ consumption.quality }}</td>
+    <td>{{ consumption.market | friendlyName }}</td>
+    <td>{{ consumption.category | friendlyName }}</td>
+    <td>{{ consumption.level | friendlyName }}</td>
+    <td>{{ consumption.quality | friendlyName }}</td>
   </tr>
 </template>
 

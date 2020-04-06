@@ -1,7 +1,5 @@
 <template>
   <div class="recipe-list-component">
-    <h1>Recipes</h1>
-
     <recipe-list-filters></recipe-list-filters>
 
     <hr />

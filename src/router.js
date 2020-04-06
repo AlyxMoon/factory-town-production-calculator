@@ -22,6 +22,16 @@ export default new Router({
       component: ConsumptionRates,
     },
     {
+      path: '/modifiers',
+      name: 'modifiers',
+      component: Default,
+    },
+    {
+      path: '/production',
+      name: 'production',
+      component: Default,
+    },
+    {
       path: '/recipes',
       name: 'recipes',
       component: Recipes,

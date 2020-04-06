@@ -2,10 +2,10 @@
   <div class="navbar-component">
     <nav class="container">
       <ul class="nav-links">
-        <li><router-link to="/recipes">Recipe List</router-link></li>
-        <li><router-link to="/modifiers">Modifiers List</router-link></li>
-        <li><router-link to="/consumption">House Consumption List</router-link></li>
-        <li><router-link to="/production">Production Lines</router-link></li>
+        <li><router-link :to="{ name: 'recipes' }">Recipe List</router-link></li>
+        <li><router-link :to="{ name: 'modifiers' }">Modifiers List</router-link></li>
+        <li><router-link :to="{ name: 'consumption' }">House Consumption Rates</router-link></li>
+        <li><router-link :to="{ name: 'production' }">Production Lines</router-link></li>
       </ul>
     </nav>
   </div>

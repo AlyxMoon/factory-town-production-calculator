@@ -1,5 +1,10 @@
 <template>
   <div>
+    <h1>Recipes</h1>
+    <p>
+      This is a collection of all recipes found in the game and the amount that recipes produces per limit not accounting for modifiers.
+    </p>
+
     <recipe-list></recipe-list>
   </div>
 </template>

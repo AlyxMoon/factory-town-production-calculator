@@ -1,9 +1,6 @@
 <template>
   <div class="recipe-list-component">
-    <h1>House Consumption Rates</h1>
-
     <hr />
-
     <table>
       <thead>
         <tr>
