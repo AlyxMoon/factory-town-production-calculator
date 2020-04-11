@@ -13,7 +13,7 @@
     </thead>
     <tbody>
       <consumption-rates-list-item
-        v-for="consumption in consumptionRates"
+        v-for="consumption in consumptionRatesOfPage"
         :key="'consumption-item-' + consumption.name"
         :consumption="consumption"
       ></consumption-rates-list-item>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 
 import ConsumptionRatesListItem from '@/components/ConsumptionRatesListItem'
 
@@ -32,9 +32,7 @@ export default {
     ConsumptionRatesListItem,
   },
   computed: {
-    ...mapState({
-      consumptionRates: ({ consumptionRates }) => consumptionRates,
-    }),
+    ...mapGetters(['consumptionRatesOfPage']),
   },
 }
 </script>

@@ -38,7 +38,7 @@ export const productionWithModifier = ({ modifiers }) => (productionPerMin) => {
 }
 
 export const filteredRecipes = ({ filters, recipes }) => {
-  const { building, usesIngredients } = filters
+  const { building, usesIngredients } = filters.recipes
   return recipes.filter(recipe => {
     let show = true
 
@@ -53,22 +53,53 @@ export const filteredRecipes = ({ filters, recipes }) => {
   })
 }
 
-export const recipesOfPage = ({ recipeListPage }, { filteredRecipes }) => {
-  return filteredRecipes.slice(recipeListPage * 10, (recipeListPage + 1) * 10)
+export const recipesOfPage = ({ pages }, { filteredRecipes }) => {
+  return filteredRecipes.slice(pages.recipes * 10, (pages.recipes + 1) * 10)
 }
 
-export const currentRecipeListPageText = ({ recipeListPage }, { filteredRecipes }) => {
-  const start = recipeListPage * 10
-  const end = (recipeListPage + 1) * 10
+export const currentRecipeListPageText = ({ pages }, { filteredRecipes }) => {
   const { length } = filteredRecipes
+  const start = (pages.recipes * 10) + 1
+  const end = Math.min((pages.recipes + 1) * 10, length)
 
-  return `Showing ${ start + 1 }-${ Math.min(end, length) } of ${ length } recipes`
+  return `Showing ${ start }-${ end } of ${ length } recipes`
 }
 
-export const hasPreviousRecipeListPage = ({ recipeListPage }) => {
-  return recipeListPage > 0
+export const hasPreviousRecipeListPage = ({ pages }) => {
+  return pages.recipes > 0
 }
 
-export const hasNextRecipeListPage = ({ recipeListPage }, { filteredRecipes }) => {
-  return (recipeListPage + 1) * 10 < filteredRecipes.length
+export const hasNextRecipeListPage = ({ pages }, { filteredRecipes }) => {
+  return (pages.recipes + 1) * 10 < filteredRecipes.length
+}
+
+export const filteredConsumptionRates = ({ filters, consumptionRates }) => {
+  const { market } = filters.consumption
+  return consumptionRates.filter(consumption => {
+    let show = true
+
+    show = show && (market.all || market[consumption.market])
+
+    return show
+  })
+}
+
+export const consumptionRatesOfPage = ({ pages }, { filteredConsumptionRates }) => {
+  return filteredConsumptionRates.slice(pages.consumption * 10, (pages.consumption + 1) * 10)
+}
+
+export const currentConsumptionRatesListPageText = ({ pages }, { filteredConsumptionRates }) => {
+  const { length } = filteredConsumptionRates
+  const start = (pages.consumption * 10) + 1
+  const end = Math.min((pages.consumption + 1) * 10, length)
+
+  return `Showing ${ start }-${ end } of ${ length } recipes`
+}
+
+export const hasPreviousConsumptionRatesListPage = ({ pages }) => {
+  return pages.consumption > 0
+}
+
+export const hasNextConsumptionRatesListPage = ({ pages }, { filteredConsumptionRates }) => {
+  return (pages.consumption + 1) * 10 < filteredConsumptionRates.length
 }

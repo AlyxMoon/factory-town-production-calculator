@@ -41,28 +41,28 @@ export const setModifier = ({ commit }, { category, value }) => {
   commit('SET_MODIFIER', { category, value })
 }
 
-export const setRecipeListPage = ({ commit }, page) => {
-  commit('SET_RECIPE_LIST_PAGE', { page })
+export const setListPage = ({ commit }, { group, page }) => {
+  commit('SET_LIST_PAGE', { group, page })
 }
 
-export const decrementRecipeListPage = ({ commit, state }, page) => {
-  commit('SET_RECIPE_LIST_PAGE', { page: state.recipeListPage - 1 })
+export const decrementListPage = ({ commit, state }, { group }) => {
+  commit('SET_LIST_PAGE', { group, page: state.pages[group] - 1 })
 }
 
-export const incrementRecipeListPage = ({ commit, state }, page) => {
-  commit('SET_RECIPE_LIST_PAGE', { page: state.recipeListPage + 1 })
+export const incrementListPage = ({ commit, state }, { group }) => {
+  commit('SET_LIST_PAGE', { group, page: state.pages[group] + 1 })
 }
 
-export const updateFilter = ({ commit, state }, { category, option, value }) => {
-  commit('UPDATE_FILTER', { category, option, value })
-  commit('SET_RECIPE_LIST_PAGE', { page: 0 })
+export const updateFilter = ({ commit, state }, { group, category, option, value }) => {
+  commit('UPDATE_FILTER', { group, category, option, value })
+  commit('SET_LIST_PAGE', { group, page: 0 })
 
   if (option === 'all') {
-    for (const opt in state.filters[category]) {
+    for (const opt in state.filters[group][category]) {
       if (opt === 'all') continue
-      commit('UPDATE_FILTER', { category, option: opt, value: false })
+      commit('UPDATE_FILTER', { group, category, option: opt, value: false })
     }
   } else {
-    commit('UPDATE_FILTER', { category, option: 'all', value: false })
+    commit('UPDATE_FILTER', { group, category, option: 'all', value: false })
   }
 }

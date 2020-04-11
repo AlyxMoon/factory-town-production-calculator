@@ -18,15 +18,15 @@ export const SET_RECIPES = (state, { recipes = [] } = {}) => {
   state.recipes = recipes
 }
 
-export const SET_RECIPE_LIST_PAGE = (state, { page }) => {
-  state.recipeListPage = page
+export const SET_LIST_PAGE = (state, { group, page }) => {
+  state.pages[group] = page
 }
 
-export const UPDATE_FILTER = (state, { category, option, value }) => {
-  if (!state.filters[category]) state.filters[category] = {}
+export const UPDATE_FILTER = (state, { group, category, option, value }) => {
+  if (!state.filters[group][category]) state.filters[group][category] = {}
 
-  state.filters[category] = {
-    ...state.filters[category],
+  state.filters[group][category] = {
+    ...state.filters[group][category],
     [option]: value,
   }
 }

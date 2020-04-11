@@ -16,7 +16,7 @@
           type="checkbox"
           :name="option"
           :checked="filters[category][option]"
-          @input="updateFilter({ category, option, value: $event.target.checked })" />
+          @input="updateFilter({ group, category, option, value: $event.target.checked })" />
       </label>
     </div>
   </div>
@@ -26,11 +26,18 @@
 import { mapActions, mapState } from 'vuex'
 
 export default {
-  name: 'RecipeListFilters',
+  name: 'FilterGroup',
+  props: {
+    group: String,
+  },
   computed: {
     ...mapState({
-      availableFilters: ({ availableFilters }) => availableFilters,
-      filters: ({ filters }) => filters,
+      availableFilters ({ availableFilters }) {
+        return availableFilters[this.group]
+      },
+      filters ({ filters }) {
+        return filters[this.group]
+      },
     }),
   },
   methods: {

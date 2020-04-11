@@ -1,16 +1,43 @@
 {
-  "building": [
-    "all",
-    "farm",
-    "forester",
-    "grainMill",
-    "lumberMill",
-    "pasture",
-    "stoneMason"
-  ],
-  "usesIngredients": [
-    "all",
-    "yes",
-    "no"
-  ]
+  "defaults": {
+    "consumption": {
+      "market": {
+        "all": true
+      }
+    },
+    "recipes": {
+      "building": {
+        "all": true
+      },
+      "usesIngredients": {
+        "all": true
+      }
+    }
+  },
+  "consumption": {
+    "market": [
+      "all",
+      "food",
+      "general",
+      "apothecary",
+      "gourmet",
+      "speciality"
+    ]
+  },
+  "recipes": {
+    "building": [
+      "all",
+      "farm",
+      "forester",
+      "grainMill",
+      "lumberMill",
+      "pasture",
+      "stoneMason"
+    ],
+    "usesIngredients": [
+      "all",
+      "yes",
+      "no"
+    ]
+  }
 }

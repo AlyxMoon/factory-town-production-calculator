@@ -1,8 +1,5 @@
 <template>
   <div class="recipe-list-component">
-    <recipe-list-filters></recipe-list-filters>
-
-    <hr />
     <label>
       Happiness
       <input
@@ -11,11 +8,6 @@
         @change="setModifier({ category: 'happiness', value: $event.target.value })" />
     </label>
 
-    <div class="pagination-wrapper">
-      <span class="page-count">{{ currentRecipeListPageText }}</span>
-      <button v-if="hasPreviousRecipeListPage" @click="decrementRecipeListPage">previous</button>
-      <button v-if="hasNextRecipeListPage" @click="incrementRecipeListPage">next</button>
-    </div>
     <table>
       <thead>
         <tr>
@@ -54,45 +46,29 @@
         </template>
       </tbody>
     </table>
-    <div class="pagination-wrapper">
-      <span class="page-count">{{ currentRecipeListPageText }}</span>
-      <button v-if="hasPreviousRecipeListPage" @click="decrementRecipeListPage">previous</button>
-      <button v-if="hasNextRecipeListPage" @click="incrementRecipeListPage">next</button>
-    </div>
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters, mapState } from 'vuex'
 
-import RecipeListFilters from '@/components/RecipeListFilters'
 import RecipeListItem from '@/components/RecipeListItem'
 import RecipeListIngredientItem from '@/components/RecipeListIngredientItem'
 
 export default {
   name: 'RecipeList',
   components: {
-    RecipeListFilters,
     RecipeListItem,
     RecipeListIngredientItem,
   },
   computed: {
-    ...mapGetters([
-      'currentRecipeListPageText',
-      'hasPreviousRecipeListPage',
-      'hasNextRecipeListPage',
-      'recipesOfPage',
-    ]),
+    ...mapGetters(['recipesOfPage']),
     ...mapState({
       happiness: ({ modifiers }) => modifiers.happiness,
     }),
   },
   methods: {
-    ...mapActions([
-      'decrementRecipeListPage',
-      'incrementRecipeListPage',
-      'setModifier',
-    ]),
+    ...mapActions(['setModifier']),
   },
 }
 </script>

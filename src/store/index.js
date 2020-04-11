@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import availableFilters from '@/assets/data/filters'
+import filters from '@/assets/data/filters'
 
 import * as actions from '@/store/actions'
 import * as getters from '@/store/getters'
@@ -9,19 +9,20 @@ import * as mutations from '@/store/mutations'
 
 Vue.use(Vuex)
 
+const { defaults, ...availableFilters } = filters
+
 const state = {
-  filters: {
-    building: {
-      all: true,
-    },
-    usesIngredients: {
-      all: true,
-    },
-  },
-  consumptionRates: [],
-  recipes: [],
-  recipeListPage: 0,
   availableFilters,
+  filters: defaults,
+
+  pages: {
+    recipes: 0,
+    consumption: 0,
+  },
+
+  recipes: [],
+  consumptionRates: [],
+
   modifiers: {
     happiness: 0,
   },

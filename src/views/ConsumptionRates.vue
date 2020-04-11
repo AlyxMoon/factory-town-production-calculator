@@ -7,6 +7,8 @@
     </p>
 
     <hr />
+    <filter-group group="consumption"></filter-group>
+
     <label>
       Number of houses
       <input
@@ -16,29 +18,50 @@
     </label>
 
     <consumption-rates-list></consumption-rates-list>
+    <table-paginator
+      :currentPageText="currentConsumptionRatesListPageText"
+      :showPrevious="hasPreviousConsumptionRatesListPage"
+      :showNext="hasNextConsumptionRatesListPage"
+      @on-previous="decrementListPage({ group: 'consumption' })"
+      @on-next="incrementListPage({ group: 'consumption' })"
+    ></table-paginator>
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapActions, mapGetters, mapState } from 'vuex'
 
 import ConsumptionRatesList from '@/components/ConsumptionRatesList'
+import FilterGroup from '@/components/FilterGroup'
+import TablePaginator from '@/components/TablePaginator'
 
 export default {
   name: 'ConsumptionRatesView',
   components: {
     ConsumptionRatesList,
+    FilterGroup,
+    TablePaginator,
   },
   computed: {
     ...mapState({
       houseCount: ({ houseCount }) => houseCount,
     }),
+    ...mapGetters([
+      'currentConsumptionRatesListPageText',
+      'hasPreviousConsumptionRatesListPage',
+      'hasNextConsumptionRatesListPage',
+    ]),
   },
   created () {
     this.fetchConsumptionRates()
   },
   methods: {
-    ...mapActions(['fetchConsumptionRates', 'setHouseCount']),
+    ...mapActions([
+      'fetchConsumptionRates',
+      'setHouseCount',
+      'decrementListPage',
+      'incrementListPage',
+    ]),
   },
 }
 </script>
