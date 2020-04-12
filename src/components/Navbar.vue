@@ -2,10 +2,12 @@
   <div class="navbar-component">
     <nav class="container">
       <ul class="nav-links">
-        <li><router-link :to="{ name: 'recipes' }">Recipe List</router-link></li>
-        <li><router-link :to="{ name: 'modifiers' }">Modifiers List</router-link></li>
-        <li><router-link :to="{ name: 'consumption' }">House Consumption Rates</router-link></li>
-        <li><router-link :to="{ name: 'production' }">Production Lines</router-link></li>
+        <li
+          v-for="link in links"
+          :key="link.name"
+        >
+          <router-link :to="{ name: link.name }">{{ link.title }}</router-link>
+        </li>
       </ul>
     </nav>
   </div>
@@ -14,6 +16,17 @@
 <script>
 export default {
   name: 'Navbar',
+  data () {
+    return {
+      links: [
+        { name: 'recipes', title: 'Recipe List' },
+        { name: 'growth', title: 'Growth Rates' },
+        { name: 'consumption', title: 'House Consumption Rates' },
+        { name: 'modifiers', title: 'Modifiers' },
+        { name: 'production', title: 'Production Lines' },
+      ],
+    }
+  },
 }
 </script>
 

@@ -37,6 +37,15 @@ html, body {
   }
 }
 
+p.not-implemented {
+  margin-top: 50px;
+
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: center;
+}
+
 table {
   width: 100%;
 

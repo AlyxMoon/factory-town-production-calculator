@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import ConsumptionRates from '@/views/ConsumptionRates'
-import Default from '@/views/Default'
-import Recipes from '@/views/Recipes'
+import {
+  ConsumptionRates,
+  GrowthRates,
+  Modifiers,
+  Production,
+  Recipes,
+} from '@/views'
 
 Vue.use(Router)
 
@@ -25,12 +29,12 @@ export default new Router({
     {
       path: '/modifiers',
       name: 'modifiers',
-      component: Default,
+      component: Modifiers,
     },
     {
       path: '/production',
       name: 'production',
-      component: Default,
+      component: Production,
     },
     {
       path: '/recipes',
@@ -38,9 +42,14 @@ export default new Router({
       component: Recipes,
     },
     {
+      path: '/growth',
+      name: 'growth',
+      component: GrowthRates,
+    },
+    {
       path: '*',
       name: 'default',
-      component: Default,
+      redirect: { name: 'recipes' },
     },
   ],
 })
